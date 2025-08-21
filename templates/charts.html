@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Average Drinks per Week by Country</h2>
+<img src="{{ url_for('static', filename='charts/drinks_chart.png') }}" alt="Drinks Chart">
+
+<h2>Average Smokes per Day by Gender</h2>
+<img src="{{ url_for('static', filename='charts/smokes_chart.png') }}" alt="Smokes Chart">
+{% endblock %}

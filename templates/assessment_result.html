@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Assessment Results</h2>
+    <ul class="list-group mt-3">
+        {% for key, value in data.items() %}
+        <li class="list-group-item"><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="alert alert-info mt-4 text-center">
+        <h4>Risk Level: {{ risk }}</h4>
+        <p>{{ message }}</p>
+    </div>
+
+    <a href="/assessment" class="btn btn-secondary mt-3">Back</a>
+</div>
+{% endblock %}

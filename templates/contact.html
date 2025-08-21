@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Contact & Support</h1>
+<p>If you or someone you know needs help, reach out to our support team.</p>
+<form method="post">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="Your Message"></textarea><br><br>
+    <button type="submit">Send</button>
+</form>
+{% endblock %}

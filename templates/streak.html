@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>Daily Progress Tracker</h2>
+  <p>Track your sober days and feelings here.</p>
+
+  <form method="post" action="/streak">
+    <div class="mb-3">
+      <label for="days" class="form-label">Days Sober</label>
+      <input type="number" class="form-control" id="days" name="days" placeholder="Enter days sober">
+    </div>
+    <div class="mb-3">
+      <label for="feelings" class="form-label">How are you feeling today?</label>
+      <textarea class="form-control" id="feelings" name="feelings" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+{% endblock %}

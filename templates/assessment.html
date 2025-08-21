@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Self-Assessment Form</h2>
+    <form method="POST" action="/assessment" class="p-4 border rounded bg-light">
+
+        <!-- Question 1 -->
+        <div class="mb-3">
+            <label class="form-label">1. How often do you drink alcohol?</label>
+            <select class="form-select" name="alcohol_frequency" required>
+                <option value="">-- Select --</option>
+                <option value="Never">Never</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Daily">Daily</option>
+            </select>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="mb-3">
+            <label class="form-label">2. Have you experienced withdrawal symptoms?</label>
+            <select class="form-select" name="withdrawal_symptoms" required>
+                <option value="">-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="mb-3">
+            <label class="form-label">3. How many cigarettes do you smoke per day?</label>
+            <select class="form-select" name="cigarettes_per_day" required>
+                <option value="">-- Select --</option>
+                <option value="None">None</option>
+                <option value="1-5">1–5</option>
+                <option value="6-10">6–10</option>
+                <option value="More than 10">More than 10</option>
+            </select>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="mb-3">
+            <label class="form-label">4. How would you describe your current stress level?</label>
+            <select class="form-select" name="stress_level" required>
+                <option value="">-- Select --</option>
+                <option value="Low">Low</option>
+                <option value="Moderate">Moderate</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="mb-3">
+            <label class="form-label">5. Do you have trouble sleeping?</label>
+            <select class="form-select" name="sleep_trouble" required>
+                <option value="">-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="mb-3">
+            <label class="form-label">6. Do you currently have social or family support for recovery?</label>
+            <select class="form-select" name="social_support" required>
+                <option value="">-- Select --</option>
+                <option value="Strong Support">Strong Support</option>
+                <option value="Some Support">Some Support</option>
+                <option value="No Support">No Support</option>
+            </select>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary w-100">Submit Assessment</button>
+    </form>
+</div>
+{% endblock %}
